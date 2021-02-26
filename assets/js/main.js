@@ -130,18 +130,8 @@
       layoutMode: 'fitRows'
     });
 
-    $('#portfolio-flters-type li').on('click', function() {
-      $("#portfolio-flters-type li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-      aos_init();
-    });
-
-    $('#portfolio-flters-lang li').on('click', function() {
-      $("#portfolio-flters-lang li").removeClass('filter-active');
+    $('#portfolio-flters li').on('click', function() {
+      $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
       portfolioIsotope.isotope({
@@ -151,7 +141,7 @@
     });
   });
 
-  // Porfolio isotope and filter
+  // Certifications isotope and filter
   $(window).on('load', function() {
     var certificationsIsotope = $('.certifications-container').isotope({
       itemSelector: '.certifications-item',
